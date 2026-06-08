@@ -1,0 +1,134 @@
+/* ১. গ্লোবাল সেটিংস */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    background-color: #020617; 
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* ২. নেভবার */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(15px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav ul { display: flex; list-style: none; gap: 30px; }
+nav a { color: #cbd5e1; text-decoration: none; font-weight: 500; transition: 0.3s; }
+nav a:hover { color: #38bdf8; }
+
+/* ৩. হিরো সেকশন */
+header {
+    background: radial-gradient(circle at top right, #1e3a8a, #020617);
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.hero h1 { font-size: 55px; margin-bottom: 20px; background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero p { font-size: 18px; color: #94a3b8; margin-bottom: 30px; }
+
+.hero button {
+    padding: 15px 40px;
+    background: #38bdf8;
+    color: #020617;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.hero button:hover { transform: scale(1.05); box-shadow: 0 0 20px #38bdf8; }
+
+/* ৪. কার্ড ডিজাইন ও অ্যানিমেশন */
+.features, .courses, .testimonial, .contact { padding: 80px 10%; text-align: center; }
+
+.box-container, .course-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.box, .course {
+    background: #0f172a;
+    padding: 40px 25px;
+    border-radius: 20px;
+    border: 1px solid #1e293b;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.box.show, .course.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.box:hover, .course:hover { border-color: #38bdf8; transform: translateY(-10px); }
+
+/* ৫. কন্টাক্ট ফর্ম */
+.contact input, .contact textarea {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 15px auto;
+    padding: 15px;
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 10px;
+    color: white;
+}
+
+.contact button {
+    padding: 15px 50px;
+    background: linear-gradient(to right, #38bdf8, #6366f1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ৬. ফুটার */
+footer { background: #020617; padding: 40px; border-top: 1px solid #1e293b; text-align: center; }
+
+/* --- রেসপন্সিভ ডিজাইন --- */
+
+/* মোবাইল ভিউ (৭৬৮ পিক্সেলের নিচে) */
+@media (max-width: 768px) {
+    nav { flex-direction: column; padding: 15px; gap: 15px; }
+    nav ul { gap: 15px; }
+    .hero h1 { font-size: 35px; }
+    .features, .courses, .testimonial, .contact { padding: 40px 5%; }
+}
+
+/* ডেস্কটপ ভিউ (৭৬৯ পিক্সেলের উপরে) */
+@media (min-width: 769px) {
+    /* ফর্ম বড় করা */
+    .contact input, .contact textarea { max-width: 800px; padding: 20px; }
+    .contact textarea { height: 150px; }
+
+    /* কার্ড পাশাপাশি রাখা */
+    .box-container, .course-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    .box, .course { width: 300px; }
+}
