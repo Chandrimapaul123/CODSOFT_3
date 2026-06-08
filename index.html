@@ -1,108 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LearnCode Academy</title>
-<link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-    <nav>
-        <h2>LearnCode</h2>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Courses</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div class="hero">
-        <h1>Learn Coding & Build Your Future</h1>
-        <p>Master Web Development, Java, Python and Full Stack Development.</p>
-
-        <button>Get Started</button>
+    <div class="calculator">
+        <input type="text" id="display" disabled placeholder="0">
+        <div class="buttons">
+            <button class="func" onclick="clearDisplay()">AC</button>
+            <button class="func" onclick="deleteLast()">DEL</button>
+            <button class="operator" onclick="appendToDisplay('/')">÷</button>
+            <button class="operator" onclick="appendToDisplay('*')">×</button>
+            
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button class="operator" onclick="appendToDisplay('-')">-</button>
+            
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button class="operator" onclick="appendToDisplay('+')">+</button>
+            
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button class="equal" onclick="calculateResult()">=</button>
+            
+            <button class="zero" onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+        </div>
     </div>
-</header>
-
-<section class="features">
-    <h2>Why Choose Us?</h2>
-
-    <div class="box-container">
-
-        <div class="box">
-            <h3>Expert Mentors</h3>
-            <p>Learn from experienced industry professionals.</p>
-        </div>
-
-        <div class="box">
-            <h3>Live Projects</h3>
-            <p>Gain real-world experience with practical projects.</p>
-        </div>
-
-        <div class="box">
-            <h3>Certificates</h3>
-            <p>Earn certificates after course completion.</p>
-        </div>
-
-    </div>
-</section>
-
-<section class="courses">
-    <h2>Popular Courses</h2>
-
-    <div class="course-container">
-
-        <div class="course">
-            <h3>Web Development</h3>
-            <p>HTML, CSS, JavaScript & React</p>
-        </div>
-
-        <div class="course">
-            <h3>Python Programming</h3>
-            <p>Beginner to Advanced Python</p>
-        </div>
-
-        <div class="course">
-            <h3>Java Development</h3>
-            <p>Core Java & OOP Concepts</p>
-        </div>
-
-    </div>
-</section>
-
-<section class="testimonial">
-    <h2>Student Reviews</h2>
-
-    <div class="review">
-        ⭐⭐⭐⭐⭐
-        <p>"Amazing learning experience!"</p>
-        <h4>- Rahul</h4>
-    </div>
-
-    <div class="review">
-        ⭐⭐⭐⭐⭐
-        <p>"Best platform to start coding."</p>
-        <h4>- Priya</h4>
-    </div>
-</section>
-
-<section class="contact">
-    <h2>Contact Us</h2>
-
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Your Email">
-    <textarea placeholder="Your Message"></textarea>
-
-    <button>Send Message</button>
-</section>
-
-<footer>
-    <p>© 2026 LearnCode Academy | All Rights Reserved</p>
-</footer>
-<script src="Script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
+
