@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box; 
+}
+
 body {
     background-color: #121212;
     display: flex;
@@ -8,10 +12,14 @@ body {
 
 .main-container {
     background: #1e1e1e;
-    padding: 22px;
+    padding: 20px;
     border-radius: 24px;
     box-shadow: 10px 10px 20px #000, -5px -5px 15px #333;
-    width: 290px;
+    width: 90%;          
+    max-width: 320px;    
+    margin: 10px;       
+}
+
 }
 
 #screen {
