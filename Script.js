@@ -1,8 +1,23 @@
-const display = document.getElementById('display');
-function appendToDisplay(input) { display.value += input; }
-function clearDisplay() { display.value = ""; }
-function deleteLast() { display.value = display.value.slice(0, -1); }
-function calculateResult() {
-    try { display.value = eval(display.value); } 
-    catch { display.value = "Error"; }
+let screen = document.getElementById('screen');
+
+function press(val) {
+    screen.value += val;
 }
+
+
+function resetAll() {
+    screen.value = "";
+}
+
+function removeLast() {
+    screen.value = screen.value.substring(0, screen.value.length - 1);
+}
+
+function finalResult() {
+    try {
+        screen.value = Function('return ' + screen.value)();
+    } catch (err) {
+        screen.value = "Syntax Error";
+    }
+}
+
