@@ -1,25 +1,49 @@
-* { box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-body { 
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-    display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; 
+body {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
-.calculator { 
-    background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); 
-    padding: 25px; border-radius: 30px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-    width: 320px; border: 1px solid rgba(255,255,255,0.2);
+
+.main-container {
+    background: #1e1e1e;
+    padding: 22px;
+    border-radius: 24px;
+    box-shadow: 10px 10px 20px #000, -5px -5px 15px #333;
+    width: 290px;
 }
-#display { 
-    width: 100%; height: 60px; background: rgba(0,0,0,0.2); border: none; 
-    color: #fff; text-align: right; font-size: 28px; padding: 10px; 
-    border-radius: 15px; margin-bottom: 20px;
+
+#screen {
+    width: 100%;
+    background: #252525;
+    border: none;
+    color: #00ffcc; 
+    text-align: right;
+    font-size: 26px;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
 }
-.buttons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-button { 
-    height: 55px; border: none; border-radius: 15px; background: rgba(255,255,255,0.1);
-    color: white; font-size: 18px; cursor: pointer; transition: 0.3s;
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
-button:hover { background: rgba(255,255,255,0.3); transform: scale(1.05); }
-.operator { background: #ff9f43; font-weight: bold; }
-.equal { background: #2ecc71; grid-row: span 2; }
-.func { background: #ff6b6b; }
-.zero { grid-column: span 2; }
+
+button {
+    height: 50px;
+    border: none;
+    border-radius: 12px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:active { background: #555; }
+
+.math-op { color: #ff9900; font-weight: bold; }
+.solve-btn { background: #0088cc; grid-row: span 2; }
+.big-btn { grid-column: span 2; }
