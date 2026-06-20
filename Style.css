@@ -1,84 +1,88 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body{
-    background: #121212;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#141e30,#243b55);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    font-family:Arial,sans-serif;
 }
 
 .main-container{
-    width: 320px;
-    background: #1e1e1e;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    width:340px;
+    background:#1f1f1f;
+    padding:20px;
+    border-radius:25px;
+    box-shadow:0 0 30px rgba(0,0,0,.6);
 }
 
 #screen{
-    width: 100%;
-    height: 60px;
-    border: none;
-    outline: none;
-    background: #252525;
-    color: #00ffcc;
-    font-size: 28px;
-    text-align: right;
-    padding: 10px;
-    border-radius: 12px;
-    margin-bottom: 15px;
+    width:100%;
+    height:80px;
+    background:#0d1117;
+    color:#00ffcc;
+    border:none;
+    border-radius:15px;
+    font-size:32px;
+    text-align:right;
+    padding:15px;
+    margin-bottom:15px;
+    outline:none;
 }
 
 .keypad{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
 }
 
 button{
-    height: 55px;
-    border: none;
-    border-radius: 12px;
-    background: #333;
-    color: white;
-    font-size: 18px;
-    cursor: pointer;
-    transition: 0.2s;
+    height:65px;
+    border:none;
+    border-radius:18px;
+    font-size:24px;
+    cursor:pointer;
+    transition:.2s;
+    color:white;
+    background:#2d2d2d;
 }
 
 button:hover{
-    background: #444;
+    transform:translateY(-2px);
 }
 
 button:active{
-    transform: scale(0.95);
+    transform:scale(.95);
 }
 
+/* Number Buttons */
+button:not(.math-op):not(.action-btn):not(.solve-btn){
+    background:#3a3a3a;
+}
+
+/* Operator Buttons */
 .math-op{
-    color: #ff9900;
-    font-weight: bold;
+    background:#ff9800;
+    color:white;
+    font-weight:bold;
 }
 
+/* CLR & DEL */
 .action-btn{
-    color: #ff4d4d;
-    font-weight: bold;
+    background:#e53935;
+    color:white;
+    font-weight:bold;
 }
 
+/* Equal */
 .solve-btn{
-    background: #0088cc;
-    grid-row: span 2;
+    background:#00a8ff;
+    color:white;
+    grid-row:span 2;
+    font-size:28px;
 }
 
-.solve-btn:hover{
-    background: #00a2f3;
-}
-
+/* Zero */
 .big-btn{
-    grid-column: span 2;
+    grid-column:span 2;
 }
