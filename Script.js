@@ -1,23 +1,23 @@
-let screen = document.getElementById('screen');
+const screen = document.getElementById("screen");
 
-function press(val) {
-    screen.value += val;
+function press(value){
+    screen.value += value;
 }
 
-
-function resetAll() {
+function resetAll(){
     screen.value = "";
 }
 
-function removeLast() {
-    screen.value = screen.value.substring(0, screen.value.length - 1);
+function removeLast(){
+    screen.value = screen.value.slice(0, -1);
 }
 
-function finalResult() {
-    try {
-        screen.value = Function('return ' + screen.value)();
-    } catch (err) {
-        screen.value = "Syntax Error";
+function finalResult(){
+    try{
+        screen.value = eval(screen.value);
+    }
+    catch(error){
+        screen.value = "Error";
     }
 }
 
