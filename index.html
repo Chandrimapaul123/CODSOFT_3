@@ -2,40 +2,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="Style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ক্যালকুলেটর মেইন বডি -->
     <div class="main-container">
         <input type="text" id="screen" readonly>
+
         <div class="keypad">
             <button class="action-btn" onclick="resetAll()">CLR</button>
             <button class="action-btn" onclick="removeLast()">DEL</button>
-            <button class="math-op" onclick="press('/')">/</button>
-            <button class="math-op" onclick="press('*')">x</button>
-            
+            <button class="math-op" onclick="press('/')">÷</button>
+            <button class="math-op" onclick="press('*')">×</button>
+
             <button onclick="press('7')">7</button>
             <button onclick="press('8')">8</button>
             <button onclick="press('9')">9</button>
-            <button class="math-op" onclick="press('-')">-</button>
-            
+            <button class="math-op" onclick="press('-')">−</button>
+
             <button onclick="press('4')">4</button>
             <button onclick="press('5')">5</button>
             <button onclick="press('6')">6</button>
             <button class="math-op" onclick="press('+')">+</button>
-            
+
             <button onclick="press('1')">1</button>
             <button onclick="press('2')">2</button>
             <button onclick="press('3')">3</button>
             <button class="solve-btn" onclick="finalResult()">=</button>
-            
+
             <button class="big-btn" onclick="press('0')">0</button>
             <button onclick="press('.')">.</button>
         </div>
     </div>
 
-    <script src="Script.js"></script>
+    <script src="script.js"></script>
+
 </body>
 </html>
-
