@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background: linear-gradient(135deg,#141e30,#243b55);
+body {
+    background: linear-gradient(135deg, #141e30, #243b55);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,38 +13,37 @@ body{
     font-family: Arial, sans-serif;
 }
 
-.main-container{
+.main-container {
     width: 340px;
     max-width: 95%;
     background: #1f1f1f;
     padding: 20px;
     border-radius: 25px;
-    box-shadow: 0 0 30px rgba(0,0,0,.6);
-    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .6);
 }
 
-#screen{
+#screen {
     width: 100%;
     height: 80px;
     background: #0d1117;
     color: #00ffcc;
-    border: none;
     border-radius: 15px;
     font-size: 32px;
-    text-align: right;
-    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
     margin-bottom: 15px;
-    outline: none;
     box-sizing: border-box;
 }
 
-.keypad{
+.keypad {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 12px;
 }
 
-button{
+button {
     height: 65px;
     border: none;
     border-radius: 18px;
@@ -52,45 +51,19 @@ button{
     cursor: pointer;
     transition: .2s;
     color: white;
-    background: #2d2d2d;
-}
-
-button:hover{
-    transform: translateY(-2px);
-}
-
-button:active{
-    transform: scale(.95);
-}
-
-/* Number Buttons */
-button:not(.math-op):not(.action-btn):not(.solve-btn){
     background: #3a3a3a;
 }
 
-/* Operator Buttons */
-.math-op{
-    background: #ff9800;
-    color: white;
-    font-weight: bold;
+button:hover {
+    transform: translateY(-2px);
 }
 
-/* CLR & DEL */
-.action-btn{
-    background: #e53935;
-    color: white;
-    font-weight: bold;
+button:active {
+    transform: scale(.95);
 }
 
-/* Equal */
-.solve-btn{
-    background: #00a8ff;
-    color: white;
-    grid-row: span 2;
-    font-size: 28px;
-}
+.math-op { background: #ff9800; font-weight: bold; }
+.action-btn { background: #e53935; font-weight: bold; }
+.solve-btn { background: #00a8ff; grid-row: span 2; font-size: 28px; }
+.big-btn { grid-column: span 2; }
 
-/* Zero Button */
-.big-btn{
-    grid-column: span 2;
-}
